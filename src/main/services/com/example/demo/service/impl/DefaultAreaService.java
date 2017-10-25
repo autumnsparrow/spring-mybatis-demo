@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.demo.db.domain.SkyArea;
 import com.example.demo.db.persistence.SkyAreaMapper;
@@ -26,7 +27,7 @@ public class DefaultAreaService implements IAreaService {
 	/* (non-Javadoc)
 	 * @see com.example.demo.service.IAreaService#getAreaNames()
 	 */
-	@Override
+	@Transactional
 	public List<String> getAreaNames() {
 		// TODO Auto-generated method stub
 		List<String> names= skyAreaMapper.selectAll().stream().map(area->area.getAreaname()).
