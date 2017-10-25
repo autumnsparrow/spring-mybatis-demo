@@ -96,7 +96,7 @@
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-            connectionURL="jdbc:mysql://127.0.0.1:3306/sky_game" userId="root" password="1qaz2wsx">
+            connectionURL="jdbc:mysql://127.0.0.1:3306/sky_game" userId="root" password="youpassword">
         </jdbcConnection>
 
         <javaTypeResolver>
