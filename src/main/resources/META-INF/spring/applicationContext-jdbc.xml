@@ -62,8 +62,7 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
         <property name="typeAliasesPackage" value="com.example.demo.db.domain" />
-        <!--  <property name="typeAliasesPackage" value="com.example.demo.db.domain,com.exmple.xx" /> -->
-     	<property name="mapperLocations">
+      	<property name="mapperLocations">
 			<list>
 				<value>classpath*:com/example/demo/db/**/*.xml</value>
 				

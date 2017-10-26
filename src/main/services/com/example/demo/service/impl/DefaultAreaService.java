@@ -21,8 +21,17 @@ import com.example.demo.service.IAreaService;
 @Service
 public class DefaultAreaService implements IAreaService {
 	
+	
+	private final SkyAreaMapper skyAreaMapper;
+	
+	
 	@Autowired
-	SkyAreaMapper skyAreaMapper;
+	public DefaultAreaService(SkyAreaMapper skyAreaMapper) {
+		super();
+		this.skyAreaMapper = skyAreaMapper;
+	}
+
+
 
 	/* (non-Javadoc)
 	 * @see com.example.demo.service.IAreaService#getAreaNames()
